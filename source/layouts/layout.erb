@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Social Tags -->
+    <meta property="og:title" content="Ziprent">
+    <meta property="og:description" content="automated property management company">
+    <meta property="og:image" content="images/meta/thumbnail.png">
+    <meta property="og:url" content="ziprent.com">
+    <meta name="twitter:card" content="images/meta/thumbnail.png">
+
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Ziprent" %></title>
+
+    <!-- Stylesheets-->
+    <%= stylesheet_link_tag "normalize" %>
+    <%= stylesheet_link_tag "site" %>
+
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  </head>
+  <body>
+    <%= partial 'partials/nav' %>
+    <div class="main-container">
+      <%= yield %>
+    </div>
+    <%= partial 'partials/footer' %>
+  <%= javascript_include_tag "site" %>
+  </body>
+</html>
