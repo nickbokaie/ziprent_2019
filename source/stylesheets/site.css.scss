@@ -17,6 +17,7 @@ $green: #0dab76;
 @import "utilities/buttons.css.scss";
 
 // GLOBAL STYLES
+
 *{
 	box-sizing: border-box;
 }
@@ -71,6 +72,29 @@ input {
   }
 }
 
+// End Global Styles
+
+// Image Styles
+.img-circle {
+  border-radius: 50%;
+  max-width: 12rem;
+}
+
+// Global Paddings
+.main-padding {
+  @include for-size(phone-only){
+    padding: 3rem;
+  }
+
+  @include for-size(tablet-portrait-up){
+    padding: 3rem 8rem;
+  }
+
+  @include for-size(tablet-landscape-up){
+    padding: 3rem 12rem;
+  }
+}
+
 // Nav Specific Settings
 .has-box-shadow {
   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
@@ -108,6 +132,40 @@ input {
   grid-column-gap: 50px;
   grid-template-rows: auto;
   padding: 3rem 6rem;
+}
+
+.two-col--container {
+  
+  @include for-size (phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .stack-order{
+      order: 2;
+    }
+  }
+
+  @include for-size (tablet-portrait-up){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .stack-order{
+      order: 2;
+    }
+  }
+
+  @include for-size(tablet-landscape-up){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+
+    .stack-order{
+      order: 0;
+    }
+  }
+
 }
 
 // Homepage Hero Container
