@@ -33,7 +33,7 @@ html {
 body {
   line-height: $baseline;
   font-size: 16px;
-  background-color: #fdfdfd;
+  background-color: #fff;
   color: $grey;
   font-family: 'SF Pro', sans-serif;
   font-weight: 400;
@@ -95,6 +95,16 @@ input {
   }
 }
 
+.price-padding{
+  @include for-size(tablet-portrait-up){
+    padding: 2rem;
+  }
+
+  @include for-size(tablet-landscape-up){
+    padding: 0rem 10rem 3rem;
+  }
+}
+
 // Nav Specific Settings
 .has-box-shadow {
   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
@@ -123,49 +133,73 @@ input {
 
 .single-col--center{
   text-align: center;
-  padding: 3rem 6rem;
 }
 
 .two-col--hero {
-  display: grid;
-  grid-template-columns: minmax(100px, 500px) 1fr;
-  grid-column-gap: 50px;
-  grid-template-rows: auto;
-  padding: 3rem 6rem;
+
+  @include for-size(phone-only){
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display:grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    padding: 3rem 6rem;
+  }
+
+  @include for-size(tablet-landscape-up){
+    grid-template-columns: minmax(100px, 500px) 1fr;
+    grid-column-gap: 50px;
+  }
+
+  .hero-img-order{
+    @include for-size(phone-only){order:1;}
+    @include for-size(tablet-portrait-up){order: 1;}
+    @include for-size(tablet-landscape-up){order: 0;}
+  }
 }
 
 .two-col--container {
+
+  h2{margin-top:0;}
   
   @include for-size (phone-only){
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-
-    .stack-order{
-      order: 2;
-    }
   }
 
   @include for-size (tablet-portrait-up){
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-
-    .stack-order{
-      order: 2;
-    }
   }
 
   @include for-size(tablet-landscape-up){
-    display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
-
-    .stack-order{
-      order: 0;
-    }
+    grid-column-gap: 50px;
   }
 
+  .stack-order{
+    @include for-size(phone-only){order: 1;}
+    @include for-size(tablet-portrait-up){order: 1;}
+    @include for-size(tablet-landscape-up){order: 0;}
+  }
+}
+
+.two-col--graphic{
+  img{width: 100%;}
+}
+
+.two-col--cta{
+  p{
+    font-size: 18px;
+  }
 }
 
 // Homepage Hero Container
@@ -230,6 +264,81 @@ input {
 
   @include for-size(tablet-landscape-up){
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+// Pricing Grid
+
+.pricing-grid-desktop {
+
+  @include for-size(phone-only) {
+    display: none;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  div{
+    padding: 1.5rem;
+    width: 100%;
+    border: 1px solid #eeeeee52
+  }
+
+  .pricing-service-title{
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .pricing-checkmark {
+    justify-self: start;
+  }
+
+  .pricing-graphic{
+    align-self: end;
+    border: none;
+    padding: 0 1rem;
+    img{width: 100%;}
+  }
+}
+
+.pricing-grid-mobile {
+  @include for-size(phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    .pricing-mobile-card{
+      padding: 1rem;
+      margin: 3rem;
+      border: 1px solid #d4d4d4;
+      border-radius: 4px;
+      box-shadow: 4px 4px 5px 0px rgba(175, 175, 175, 0.2);
+
+      hr{
+        color: rgba($color: #979797, $alpha: .30);
+        margin: 30px 0px 20px 0px;
+      }
+
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    
+      ul li{
+        padding: 10px 0px;
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include for-size(tablet-portrait-up){
+    display: none;
   }
 }
 
