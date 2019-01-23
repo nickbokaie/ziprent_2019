@@ -303,6 +303,11 @@ input {
     padding: 0 1rem;
     img{width: 100%;}
   }
+
+  i{
+    color: $green;
+    font-size: 24px;
+  }
 }
 
 .pricing-grid-mobile {
