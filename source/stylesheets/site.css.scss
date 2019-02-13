@@ -61,18 +61,25 @@ input {
   box-sizing: border-box;
 
   @include for-size(phone-only) {
-    width: 300px;
+    width: 275px;
     margin-bottom: 10px;
   }
   @include for-size(tablet-portrait-up) {
-    width: 300px;
+    width: 275px;
   }
   @include for-size(tablet-landscape-up) {
-  width: 320px;
+  width: 275px;
   }
 }
 
 // End Global Styles
+
+//Helper Styles
+.no-margin-top{
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+  }
+}
 
 // Image Styles
 .img-circle {
@@ -129,13 +136,9 @@ input {
   max-width: 1600px;
 }
 
-// Layout Containers
+//Hero Containers
 
-.single-col--center{
-  text-align: center;
-}
-
-.two-col--hero {
+.two-col-home-hero{
 
   @include for-size(phone-only){
     display:grid;
@@ -148,12 +151,12 @@ input {
     display:grid;
     grid-template-columns: 1fr; 
     grid-template-rows: auto;
-    padding: 3rem 6rem;
+    padding: 4rem 6rem 3rem;
   }
 
   @include for-size(tablet-landscape-up){
-    grid-template-columns: minmax(100px, 500px) 1fr;
-    grid-column-gap: 50px;
+    grid-template-columns: minmax(100px, 500px) minmax(100px, 550px);
+    grid-column-gap: 100px;
   }
 
   .hero-img-order{
@@ -161,6 +164,44 @@ input {
     @include for-size(tablet-portrait-up){order: 1;}
     @include for-size(tablet-landscape-up){order: 0;}
   }
+}
+
+.two-col-property-hero{
+
+  @include for-size(phone-only){
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display:grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    padding: 4rem 0rem 3rem 6rem;
+  }
+
+  @include for-size(tablet-landscape-up){
+    grid-template-columns: minmax(100px, 500px) 1fr;
+    grid-column-gap: 75px;
+  }
+
+  .hero-img-order{
+    @include for-size(phone-only){order:1;}
+    @include for-size(tablet-portrait-up){order: 1;}
+    @include for-size(tablet-landscape-up){order: 0;}
+  }
+}
+
+// Layout Containers
+
+.single-col--center{
+  text-align: center;
+}
+
+.single-col--left{
+  text-align: left;
 }
 
 .two-col--container {
@@ -200,6 +241,28 @@ input {
   p{
     font-size: 18px;
   }
+}
+
+.three-col--container {
+
+  @include for-size(phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size(tablet-portrait-up){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size(tablet-landscape-up){
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 50px;
+  }
+
 }
 
 // Homepage Hero Container
@@ -345,6 +408,12 @@ input {
   @include for-size(tablet-portrait-up){
     display: none;
   }
+}
+
+// Customer Success
+
+.customer-featured{
+  h5{margin-top: 0;}
 }
 
 
