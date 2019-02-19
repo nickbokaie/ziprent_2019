@@ -1,6 +1,7 @@
 ---
 title: How it works | Ziprent
 description: add
+layout: main
 ---
 
 <section class="two-col-property-hero">
@@ -26,14 +27,14 @@ description: add
         <p>Getting started with Ziprent is as easy as typing out your address and hitting enter. You’ll get immediate access to your property dashboard. We don’t charge you a dime to see our platform. We want to get to know you first 😀. 
             </p>
     </div>
-    <div>
+    <div class="two-col--graphic">
         <img src="<%= lorem.image('400x300', :random_color => true) %>">
     </div>
 </section>
 
 <!-- Property Concierge -->
 <section class="main-padding two-col--container">
-    <div class="stack-order">
+    <div class="stack-order two-col--graphic">
         <img src="<%= lorem.image('400x300', :random_color => true) %>">
     </div>
     <div>
@@ -50,14 +51,14 @@ description: add
         <h2>Finding the Perfect Tenant</h2>
         <p>Should you need to find a tenant at any given point, we’ve come up with a tried and true method of finding high quality tenant within 30 days. In the off chance that our tenant doesn’t work out, we provide all of properties with a Rental Guarantee** as a safety net.</p>
     </div>
-    <div>
+    <div class="two-col--graphic">
         <img src="<%= lorem.image('400x300', :random_color => true) %>">
     </div>
 </section>
 
 <!-- Property Management -->
 <section class="main-padding two-col--container">
-    <div class="stack-order">
+    <div class="stack-order two-col--graphic">
         <img src="<%= lorem.image('400x300', :random_color => true) %>">
     </div>
     <div>
@@ -67,7 +68,6 @@ description: add
 </section>
 
 <!-- Bottom CTA --> 
-
-
+<%= partial 'partials/bottom-cta' %>
 
 
