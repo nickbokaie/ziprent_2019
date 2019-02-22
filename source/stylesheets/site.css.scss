@@ -114,6 +114,12 @@ img-container{
   background:#f3f3f3;
 }
 
+.service-icons {
+  i {
+    font-size: 3rem;
+  }
+}
+
 // Global Paddings
 .main-padding {
   @include for-size(phone-only){
@@ -307,6 +313,7 @@ img-container{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 50px;
+    grid-row-gap: 50px;
   }
 
 }
