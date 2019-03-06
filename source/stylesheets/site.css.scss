@@ -1,4 +1,4 @@
-@import "fonts/sf-pro.css";
+@import "fonts/poppins.css";
 
 // Main Colors
 $blue: #7FBAFA;
@@ -35,7 +35,7 @@ body {
   font-size: 16px;
   background-color: #fff;
   color: $grey;
-  font-family: 'SF Pro', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.6;  
   margin: 0;
@@ -87,10 +87,9 @@ input {
   }
 }
 
-img-container{
+.img-container{
   img {width: 100%;}
 }
-
 
 // Image Styles
 .img-circle {
@@ -114,13 +113,18 @@ img-container{
   background:#f3f3f3;
 }
 
+.gradient-bg {
+  background-image: linear-gradient(to right bottom, #fdfdfd, #fcfcfd, #fbfbfc, #fafbfc, #f9fafb);
+}
+
 .service-icons {
   i {
     font-size: 3rem;
   }
 }
 
-// Global Paddings
+/********* Global Paddings ***********/
+
 .main-padding {
   @include for-size(phone-only){
     padding: 3rem;
@@ -145,7 +149,7 @@ img-container{
   }
 
   @include for-size(tablet-landscape-up) {
-    padding: 3rem 8rem;
+    padding: 3rem 6rem;
   }
 }
 
@@ -183,7 +187,7 @@ img-container{
   max-width: 1600px;
 }
 
-//Hero Containers
+/********* Hero Containers / Helpers ***********/
 
 .two-col-home-hero{
 
@@ -246,15 +250,24 @@ img-container{
   background-size: cover;
 }
 
-// Layout Containers
+/********* Layout Containers ***********/
+
+// Single Col Helpers
 
 .single-col--center{
   text-align: center;
+  img{
+    width: 100%;
+    max-width: 800px;
+  }
 }
 
 .single-col--left{
   text-align: left;
 }
+
+
+// Two Col Helpers
 
 .two-col--container {
 
@@ -277,12 +290,6 @@ img-container{
     grid-template-rows: auto;
     grid-column-gap: 50px;
   }
-
-  .stack-order{
-    @include for-size(phone-only){order: 1;}
-    @include for-size(tablet-portrait-up){order: 1;}
-    @include for-size(tablet-landscape-up){order: 0;}
-  }
 }
 
 .two-col--graphic{
@@ -294,6 +301,58 @@ img-container{
     font-size: 18px;
   }
 }
+
+.stack-order{
+  @include for-size(phone-only){order: 1;}
+  @include for-size(tablet-portrait-up){order: 1;}
+  @include for-size(tablet-landscape-up){order: 0;}
+}
+
+.two-col-left-em {
+  @include for-size (phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size (tablet-portrait-up){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size(tablet-landscape-up){
+    display: grid;
+    grid-template-columns: 2fr 1.25fr;
+    grid-template-rows: auto;
+    grid-column-gap: 100px;
+  }
+}
+
+.two-col-right-em {
+  @include for-size (phone-only){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size (tablet-portrait-up){
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @include for-size(tablet-landscape-up){
+    display: grid;
+    grid-template-columns: 1.25fr 2fr;
+    grid-template-rows: auto;
+    grid-column-gap: 100px;
+  }
+}
+
+.two-col-right-em
+
+// 3 Col Helpers
 
 .three-col--container {
 
