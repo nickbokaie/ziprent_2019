@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1442px" height="505px" viewBox="0 0 1442 505" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="36.8802793%" y1="44.4129178%" x2="72.0798458%" y2="54.335805%" id="linearGradient-1">
+            <stop stop-color="#FDFDFD" offset="0%"></stop>
+            <stop stop-color="#F9FAFB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(0.000000, -661.000000)" fill="url(#linearGradient-1)">
+            <path d="M2,661 L1442,661 L1442,1111.50931 C1364.32487,1147.83861 1245.92155,1166.00217 1086.79004,1166 C848.092781,1165.99674 585.194829,1041.11236 364.780731,1041.11236 C217.837999,1041.11236 96.2444223,1056.21791 0,1086.42902 L2,661 Z" id="Rectangle" transform="translate(721.000000, 913.500000) scale(-1, 1) translate(-721.000000, -913.500000) "></path>
+        </g>
+    </g>
+</svg>

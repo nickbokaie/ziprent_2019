@@ -1,0 +1,36 @@
+---
+Title: Marin Property Management
+Description: Need to add a description here
+layout: landing-page
+location: San Francisco
+location_description: We want to add something SF specific tenant placement here
+---
+<!-- Main CTA -->
+<section class="lp-style">
+    <section class="wide-padding single-col--center grad-bg-2 img-container lp-hero large-paragraph">
+        <h1><%= current_page.data.location %> Property Management</h1>
+        <p>Utilizing the latest technology and excellent customer service. All for <strong>$95 bucks a month.</strong> Get started for free.</p>
+        <div class="input-row homepage-input">
+            <input placeholder="Email Address">
+            <button class="btn btn-primary">Get Started</button>
+        </div> 
+        <img style="max-width: 800px;" alt="Ziprent software on the devices" src="/images/software/platform-devices.png">
+    </section> 
+</section>
+
+<!-- Regional Description-->
+<section class="single-col--center main-padding">
+    <h2>We Know <%= current_page.data.location %></h2>
+    <p><%= current_page.data.location_description %></p>
+</section>
+
+<!-- How it works flow-->
+<%= partial 'partials/lp/process' %>
+
+<!-- Cusotmer Love section-->
+<section class="wide-padding">
+    <h3>Still Need to the new customer reviews</h3>
+</section>
+
+<!-- Bottom CTA -->
+<%= partial 'partials/bottom-cta-2' %>
