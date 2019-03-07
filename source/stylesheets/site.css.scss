@@ -5,6 +5,7 @@ $blue: #7FBAFA;
 $darkblue: #2A4059;
 $grey: #4a4a4a;
 $green: #0dab76;
+$snow: #f9fafb;
 
 // Bulma Components
 @import "bulma/utilities/_all.scss";
@@ -87,6 +88,11 @@ input {
   }
 }
 
+.align-center-end{
+  justify-self: end;
+  align-self: center;
+}
+
 .img-container{
   img {width: 100%;}
 }
@@ -113,15 +119,17 @@ input {
   background:#f3f3f3;
 }
 
+.snow-bg{
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  background: $snow;
+
+}
+
 .gradient-bg {
   background-image: linear-gradient(to right bottom, #fdfdfd, #fcfcfd, #fbfbfc, #fafbfc, #f9fafb);
 }
 
-.service-icons {
-  i {
-    font-size: 3rem;
-  }
-}
 
 /********* Global Paddings ***********/
 
@@ -350,7 +358,7 @@ input {
   }
 }
 
-.two-col-right-em
+.two-col-right-em{}
 
 // 3 Col Helpers
 
@@ -374,7 +382,7 @@ input {
     grid-column-gap: 50px;
     grid-row-gap: 50px;
   }
-
+  
 }
 
 // Homepage Hero Container
@@ -576,15 +584,14 @@ input {
 }
 
 
-
-
 //Footer Styles
 .footer{
-  background-color: $darkblue;
+  background-color: white;
   a{
-    color: white; 
+    color: inherit; 
+    font-size: 12px;
     &:hover {
-      opacity: .9;
+      color: $blue;
     }
   }
 
@@ -593,71 +600,30 @@ input {
     padding: 0;
     margin: 0;
   }
-}
 
-.footer_top {
-  padding: 50px 50px 25px;
-  margin: 0 auto;
-  text-align: center;
-  img {
-    max-width: 75px;
+  li{
+    margin: 10px 0px;
   }
 }
 
 .footer_icons {
   display: flex;
-  justify-content: center;
-  margin-left: 40px;
-  padding: 25px 0px;  
+  justify-content: left;
+  padding: 25px 0px; 
 
   a {
-    padding-right: 45px;
+    padding-right: 20px;
   }
 }
 
-.footer_bottom{
-  @include for-size(phone-only){
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    margin: 0 auto;
-    color: white;
-    padding: 1rem 3rem;
-  }
-
-  @include for-size(tablet-portrait-up) {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-row-gap: 20px;
-    grid-column-gap: 10px;
-    margin: 0 auto;
-    color: white;
-    padding: 1rem 3rem;
-  }
-
-  @include for-size(tablet-landscape-up){
-    padding: 25px 10rem;
-  }
-  li {
-    font-size: 14px; 
-  }
+.footer_copyright{
+  font-size: 10px; 
+  text-align: center; 
+  color: inherit; 
+  padding-bottom: 10px;
 }
 
-.footer-header{
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  
-  p{
-    margin: 0;
-    font-size: 14px;
-  }
-}
-
-.footer_location_grid{
+.footer-grid{
   @include for-size(phone-only){
     display: grid;
     grid-template-rows: auto;
@@ -666,19 +632,16 @@ input {
   @include for-size(tablet-portrait-up){
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: auto;
   }
 
   @include for-size(tablet-landscape-up){
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 8px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 
-.footer_copyright{
-  font-size: 10px; 
-  text-align: center; 
-  color: white; 
-  padding-bottom: 10px;
+.footer-logo{
+  img{
+    max-width: 75px;
+  }
 }
