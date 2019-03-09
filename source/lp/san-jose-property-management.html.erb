@@ -1,13 +1,13 @@
 ---
-Title: Marin Property Management
-Description: Need to add a description here
+Title: San Jose Property Management
+Description: Utlizing the latest technology for property management in San Jose
 layout: landing-page
 location: San Jose
-location_description: We want to add something San Jose specific tenant placement here
+location_description: San Jose property management can be tricky. Our experienced local agents leverage our next-generation software to seamlessly manage your property. Our San Jose property management services includes a personal property concierge,  rent collection, inspections every 6 months, repair request processing, and full financial accounting. Get started for free and see why we are the #1 property management company in San Jose.
 ---
 <!-- Main CTA -->
 <section class="lp-style">
-    <section class="wide-padding single-col--center grad-bg-2 img-container lp-hero large-paragraph">
+    <section class="wide-padding single-col-center grad-bg-2 img-container lp-hero large-paragraph">
         <h1><%= current_page.data.location %> Property Management</h1>
         <p>Utilizing the latest technology and excellent customer service. All for <strong>$95 bucks a month.</strong> Get started for free.</p>
         <div class="input-row homepage-input">
@@ -19,7 +19,7 @@ location_description: We want to add something San Jose specific tenant placemen
 </section>
 
 <!-- Regional Description-->
-<section class="single-col--center main-padding">
+<section class="single-col-center main-padding">
     <h2>We Know <%= current_page.data.location %></h2>
     <p><%= current_page.data.location_description %></p>
 </section>
@@ -28,8 +28,10 @@ location_description: We want to add something San Jose specific tenant placemen
 <%= partial 'partials/lp/process' %>
 
 <!-- Cusotmer Love section-->
-<section class="wide-padding">
-    <h3>Still Need to the new customer reviews</h3>
+<section class="wide-padding single-col-center">
+    <h2>Customer Love ❤️</h2>
+    <p>Ziprent has saved our customers thousands of dollars in property management fees. See what they have to say!</p>
+    <%= partial 'partials/customer' %>
 </section>
 
 <!-- Bottom CTA -->

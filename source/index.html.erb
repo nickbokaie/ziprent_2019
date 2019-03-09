@@ -6,10 +6,10 @@ layout: main
 
 <!-- Two Col Hero -->
 <section class="two-col-home-hero grad-bg-1">
-  <div class="homepage-hero--graphic hero-img-order">
+  <div class="homepage-hero-graphic hero-img-order">
     <img src="images/illustrations/homepage-main-graphic.png" alt="Main property management graphic">
   </div>
-  <div class="homepage-hero--cta">
+  <div class="homepage-hero-cta">
     <h1>Property Management Simplified</h1>
     <p>Utilizing the latest technology and excellent customer service. All for <strong>$95 bucks a month.</strong> Get started for free.</p>
     <div class="input-row homepage-input">
@@ -19,43 +19,20 @@ layout: main
   </div>
 </section>
 
-
 <!-- Single Col - Centered-->
 
-<section class="single-col--center main-padding large-paragraph">
+<section class="single-col-center main-padding large-paragraph">
   <h2>Efficiency Through Automation</h2>
   <p>At Ziprent, we aim to provide the most efficient property management experience for both tenants and homeowners. Through the perfect integration of technology and hands-on customer service, our platform provides the <strong>highest level of property monetization</strong>, <strong>maintenance</strong>, and utilization at the <strong>lowest cost possible.</strong></p>
   <button class="btn btn-primary"><a href="/property-management">See How</a></button></a>
 </section>
 
 <!-- Customer Success -->
-<section class="wide-padding snow-bg single-col--center">
+<section class="main-padding snow-bg single-col-center">
   <h2>Customer Love ❤️</h2>
   <p>Ziprent has saved our customers thousands of dollars in property management fees. See what they have to say!</p>
-  <p>View our case studies</p>
-  <div class="customer-card-grid">
-
-    <div class="customer-card">
-      <div class="customer-profile-img">
-          <img src="/images/portraits/arvand.jpg">
-      </div>
-      <div class="customer-profile-text">
-        <p>Nicolas V.</p>
-        <p style="font-size: 14px;">Homeowner in San Ramon</p>
-        <p style="font-size: 12px;"><a href="https://www.yelp.com/biz/ziprent-tiburon" target="_blank">Yelp</a></p>
-      </div>
-      <p>“Ziprent has gotten me to a point where the property management is completely hands-off, and my tenants are happy with it also!” 
-    </div>
-
-    <div class="customer-card">
-      <p>[Ziprent] provided honest and helpful insights that demonstrated their capabilities and experience. I was bracing for a long and painful process, especially while dealing with things from abroad - could not have been happier with the quick outcome and would recommend them to anyone.”</p>
-      <p>- Mai I. via <a href="https://www.thumbtack.com/-Belvedere-Tiburon-CA/service/3712812" target="_blank">Thumbtack</a></p>
-    </div>
-    <div class="customer-card">
-      <p>"...Ziprent has exceeded my expectations and actually has saved me quite a bit of time effortlessly getting my properties filled with tenants."</p>
-      <p>Gregg H. via <a href="https://www.facebook.com/ziprent/" target="_blank">Facebook</a></p>
-    </div>
-  </div>
+  <a class="large-underline" href="/case-study">View Case Studies</a>
+  <%= partial 'partials/customer' %>
 </section>
 
 
@@ -74,4 +51,4 @@ layout: main
 </section>
 
 <!-- Bottom CTA -->
-<%= partial 'partials/bottom-cta' %>
+<%= partial 'partials/bottom-cta-2' %>
