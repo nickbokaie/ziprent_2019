@@ -382,6 +382,7 @@ p.quote-customer{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    grid-row-gap: 25px;
   }
 
   @include for-size (tablet-portrait-up){
