@@ -145,7 +145,10 @@ p.quote-customer{
     list-style: none;
     margin: 0; 
     border-bottom: 1px solid #eee;
-    padding: 15px 0px;
+    padding: 20px 0px;
+  }
+  i{
+    padding-right: 10px;
   }
 }
 
@@ -223,21 +226,7 @@ p.quote-customer{
   }
 
   @include for-size(tablet-landscape-up){
-    padding: 3rem 12rem;
-  }
-}
-
-.wide-padding{
-  @include for-size(phone-only){
-    padding: 3rem;
-  }
-
-  @include for-size(tablet-portrait-up){
-    padding: 3rem 6rem;
-  }
-
-  @include for-size(tablet-landscape-up) {
-    padding: 4rem 6rem;
+    padding: 3rem 11.5rem;
   }
 }
 
