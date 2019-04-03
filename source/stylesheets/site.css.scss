@@ -384,7 +384,7 @@ p.quote-customer{
   @include for-size(tablet-landscape-up){
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
-    grid-column-gap: 75px;
+    grid-column-gap: 125px;
   }
 }
 
