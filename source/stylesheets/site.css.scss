@@ -558,6 +558,11 @@ p.quote-customer{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
+  
+  .pricing-button-bottom{
+    padding: 0;
+    border: none;
+  }
 
   div{
     padding: 1.5rem;
@@ -627,6 +632,8 @@ p.quote-customer{
     display: none;
   }
 }
+
+
 
 // Customer Success
 

@@ -11,6 +11,7 @@ activate :livereload
 # Pretty URLs
 activate :directory_indexes
 
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
