@@ -139,6 +139,18 @@ p.quote-customer{
   justify-self: center;
 }
 
+.text-left{
+  text-align: left;
+}
+
+.list{
+  padding: 0;
+  li{
+    list-style: none;
+    margin: 0;
+  }
+}
+
 .segment-list{
   padding: 0;
   li{
@@ -262,7 +274,6 @@ p.quote-customer{
 
 // Main Page Container
 .main-container {
-  max-width: 1600px;
   margin: 0 auto; 
 }
 
@@ -309,7 +320,10 @@ p.quote-customer{
   @include for-size(tablet-landscape-up){
     grid-template-columns: minmax(100px, 500px) minmax(100px, 550px);
     grid-column-gap: 100px;
+    padding: 4rem 6rem 3rem;
+    justify-content: center;
   }
+
 
   .hero-img-order{
     @include for-size(phone-only){order:1;}
@@ -755,6 +769,16 @@ p.quote-customer{
   p{
     font-size: 14px; 
   }
+}
+
+// Toggle style
+.toggle-content {
+	display: none;
+  transition: all .5s ease-in-out;
+}
+
+.toggle-content.is-visible {
+	display: block;
 }
 
 //Footer Styles
